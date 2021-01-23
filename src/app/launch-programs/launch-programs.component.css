@@ -1,0 +1,135 @@
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.filter-header-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-header-wrap a {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.card-body {
+    position: relative;
+}
+
+.filter-section-wrapper h4 {
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.filter-sub-title {
+    position: relative;
+}
+
+.filter-sub-title h4::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: -8px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    width: 72%;
+    background: #bdb7b9;
+}
+
+.filter-buttons {
+    list-style: none outside;
+    margin: 0;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.filter-buttons li {
+    margin-top: 10px;
+    flex-basis: 35%;
+    background: #c5e09b;
+    font-family: inherit;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    width: 36%;
+    display: inline-block;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    font-weight: 500;
+    letter-spacing: 0;
+}
+
+.filter-values{
+    display: grid;
+    grid-template-columns: minmax(25%,auto) minmax(25%,auto);
+    justify-content: space-between;
+}
+
+.filter-item{
+    background-color: #c5e09b;
+    border-radius: 8px;
+    font-family: inherit;
+    padding: 4px 25px 8px;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+@media screen and (min-width: 701px){
+.my-3 {
+    margin: 0 0 50px;
+    font-size: 16px;
+}
+}
+
+.app-footer{
+    text-align: center;
+    margin: 45px 0 10px;
+    font-size: 22px;
+}
+
+.filter-type{
+    display: inline-block;
+    border-bottom: 2px solid #c4bdbb;
+    width: 90%;
+    margin: 0 0 15px;
+    padding-bottom: 4px;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.filter-category{
+    text-align: center;
+    margin: 5px 0 25px;
+}
+
+.filter-buttons li:hover {
+    color: #fff;
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.filter-buttons li.active {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.loading-text {
+    color: #fff;
+    font-size: 20px;
+}

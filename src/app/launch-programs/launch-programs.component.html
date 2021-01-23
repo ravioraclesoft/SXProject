@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="my-3">SpaceX Launch Programs</h1>
+        </div>
+        <div class="col-md-4">
+            <aside class="filter-section-wrapper">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="filter-sub-title">
+                            <h4>Launch Year</h4>
+                        </div>
+                        <ul class="filter-buttons">
+                            <li *ngFor="let year of launchYears; let i = index" [ngClass]="launchYearSelectedIndex === i ? 'active' : ''" (click)="filterLaunchPrograms(i, year)">{{year}}</li>
+                        </ul>
+                        <section class="filter-category"><h3 class="filter-type">Successful Launch</h3><div class="filter-values"><button class="filter-item">true</button><button class="filter-item active">false</button></div></section>
+                        <section class="filter-category"><h3 class="filter-type">Successful Landing</h3><div class="filter-values"><button class="filter-item">true</button><button class="filter-item active">false</button></div></section>
+                    </div>
+                </div>
+            </aside>
+        </div>
+        <div class="col-md-8">
+            <p *ngIf="isLoading" class="loading-text">Loading...</p>
+            <p *ngIf="launchDataArray && !launchDataArray.length && !isLoading" class="loading-text">No Data Found!</p>
+            <div *ngIf="!isLoading" class="row">
+                <div *ngFor="let item of launchDataArray" class="col-md-4">
+                    <app-launch-details-card [data]="item"></app-launch-details-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="app-footer"><p><b>Developed by: </b>Ravi Pushkar</p></footer>

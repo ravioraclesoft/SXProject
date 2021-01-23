@@ -1,0 +1,23 @@
+img {
+    max-width: 100%;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.figure-item{
+    background: #f2f2f2;
+    text-align: center;
+}
+
+.highlight{
+    color: #474f98;
+    margin: 15px 0;
+}
