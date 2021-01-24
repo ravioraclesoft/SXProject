@@ -41,7 +41,23 @@ export class LaunchProgramsComponent implements OnInit {
   }
 
   getFilteredLaunches(year: string): any {
-    this.appService.getLaunchesByYear(year)
+    this.appService.getLaunchesByYear(year,'','')
+    .subscribe((response: any) => {
+      // console.log(response);
+      this.launchDataArray = response;
+    }, err => {
+      console.log(err);
+    })
+  }
+
+  filterLaunchProgramsFlag(flagS: string,flagS1:string): any {
+    // console.log(index, year);
+    this.getFilteredLaunchesFlag(flagS,flagS1);
+    this.showFilter = true;
+  }
+
+  getFilteredLaunchesFlag(flagS: string,flagS1:string): any {
+    this.appService.getLaunchesByYear('',flagS,flagS1)
     .subscribe((response: any) => {
       // console.log(response);
       this.launchDataArray = response;

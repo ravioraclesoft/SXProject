@@ -13,8 +13,8 @@
                         <ul class="filter-buttons">
                             <li *ngFor="let year of launchYears; let i = index" [ngClass]="launchYearSelectedIndex === i ? 'active' : ''" (click)="filterLaunchPrograms(i, year)">{{year}}</li>
                         </ul>
-                        <section class="filter-category"><h3 class="filter-type">Successful Launch</h3><div class="filter-values"><button class="filter-item">true</button><button class="filter-item active">false</button></div></section>
-                        <section class="filter-category"><h3 class="filter-type">Successful Landing</h3><div class="filter-values"><button class="filter-item">true</button><button class="filter-item active">false</button></div></section>
+                        <section class="filter-category"><h3 class="filter-type">Successful Launch</h3><div class="filter-values"><button class="filter-item" (click)="filterLaunchProgramsFlag('launch_success','true')">true</button><button class="filter-item active" (click)="filterLaunchProgramsFlag('launch_success','false')">false</button></div></section>
+                        <section class="filter-category"><h3 class="filter-type">Successful Landing</h3><div class="filter-values"><button class="filter-item" (click)="filterLaunchProgramsFlag('land_success','true')">true</button><button class="filter-item active" (click)="filterLaunchProgramsFlag('land_success','false')">false</button></div></section>
                     </div>
                 </div>
             </aside>
